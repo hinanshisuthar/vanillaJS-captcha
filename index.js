@@ -1,5 +1,3 @@
-import "./styles.css";
-
 let code;
 let output = document.querySelector("#output");
 let input = document.querySelector("#input");
@@ -18,10 +16,10 @@ function createCaptcha() {
   }
   let canv = document.createElement("canvas");
   canv.id = "captcha";
-  canv.width = 65;
+  canv.width = 80;
   canv.height = 50;
   let ctx = canv.getContext("2d");
-  ctx.font = "24px";
+  ctx.font = "25px Georgia";
   ctx.strokeText(captcha.join(""), 0, 30);
   code = captcha.join("");
   document.getElementById("captcha").appendChild(canv);
